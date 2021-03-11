@@ -1,0 +1,78 @@
+def pruneTree(tree,Nmax, alpha):
+    newtree=list([list(val) for val in tree]) #creates a new tree in order to modify it and compare the error with the original tree
+    final=1
+    n=len(tree)
+    print('Nouvelle recursivité n:',n)
+    if Nmax==0:
+        return newtree
+
+    for i in reversed(range(0,n-1)):
+        if newtree[i][0]=='leaf' and newtree[i+1][0]=='leaf' and newtree[i][1]//2 == newtree[i+1][1]//2: #two leaves from the same father
+            father = newtree[i][1]//2 #nb of the node of the father
+            for val in newtree:
+                if val[1] == father:
+                    val[0]='leaf'
+                    del val[3]
+                    totalsurvivors=newtree[i][4]+newtree[i+1][4]
+                    totaldeads=newtree[i][5]+newtree[i+1][5]
+                    if totaldeads < totalsurvivors: #the class
+                        val[3]=1
+                    else:
+                        val[3]=0
+            newtree[i]='Null'
+            newtree[i+1]='Null'
+            
+            newtree.remove('Null') #deletes the leaves under the father 
+            newtree.remove('Null')
+            if generalizationError(newtree, alpha)< generalizationError( tree, alpha):
+                final =0
+                print('recursivité')
+                return(pruneTree(newtree,Nmax-1,alpha))
+                break
+            else:
+                final=1
+                newtree=list([list(val) for val in tree])
+                print('pas de recursivité')
+             
+    if final==1:
+        return newtree
+                
+
+
+
+
+
+
+
+def pruneTree(tree,Nmin, alpha):
+    level = tree[-1][2]+1
+    tree0=list([list(val) for val in tree])
+    for j in reversed(range(level)):
+        print('j',j)
+        nb=0
+        for k in range (len(tree)):
+            print('k',k)
+            if tree0[k][0]=='node'and tree[k][2]==j-1:
+                print('ok')
+                for l in reversed(range(len(tree0)-1)):##
+                    if tree0[l][1]//2 == tree0[k][1]:
+                        newtree=list([list(val) for val in tree0]) #creates a new tree in order to modify it and compare the error with the original tree
+                        newtree[k][0]='leaf'
+                        del newtree[k][3]
+                        if newtree[k][4]>newtree[k][5]:
+                            newtree[k][3]=1
+                        else:
+                            newtree[k][3]=0
+                        newtree[l]=['Null',0,0]
+                        newtree[l+1]=['Null',0,0]
+            
+                        nb+=2
+                        print(tree0,newtree,'\n\n')
+                for m in range(nb):
+                    newtree.remove( ['Null',0,0])
+                if generalizationError(newtree, alpha)< generalizationError( tree0, alpha):
+                    tree0 = list([list(val) for val in newtree])
+                
+    
+        return tree0
+                

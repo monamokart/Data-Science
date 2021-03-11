@@ -1,0 +1,38 @@
+Root
+Level :  0 
+Feature : Sex  0 
+Gini :  0.4723650263627057
+
+
+Intermediate
+Level :  1 
+Feature : Pclass  1 2 
+Gini :  0.384430473372781
+**************
+leaf
+Level :  1 
+Class :  0 
+Gini :  0.3064437162277842
+
+
+leaf
+Level :  2 
+Class :  1 
+Gini :  0.10140306122448985
+**************
+Intermediate
+Level :  2 
+Feature : Embarked  0 1 
+Gini :  0.5
+
+
+leaf
+Level :  3 
+Class :  1 
+Gini :  0.4228316326530613
+**************
+leaf
+Level :  3 
+Class :  0 
+Gini :  0.46875
+Generalization error : 0.19122609673790777
