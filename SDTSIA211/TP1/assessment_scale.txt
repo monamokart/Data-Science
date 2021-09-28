@@ -1,0 +1,15 @@
+Please comment each report using the following scale :
+
+0 = No report
+
+Basic work = There are some good things that show that the course has been followed.
+
+Average = Most of the questions have an answer and the code runs with a few bugs only.
+
+Good work = The code gives a consistent result, answers to theoretical questions are correct and the results are commented.
+
+Very good work = The code gives the correct answer. The optimization algorithms are generic (this means that the function we are optimizing is given as an argument). The proof for theoretical questions is convincing. Graphs support the comments.
+
+Advanced understanding = The implementation choices give an efficient algorithm. The group managed to interpret the result and draw a link with what has been seen in the lessons (for instance what theorem explains what is observed). 
+
+
