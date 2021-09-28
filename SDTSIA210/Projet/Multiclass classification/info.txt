@@ -1,0 +1,40 @@
+Data Set Name:
+Activity recognition using wearable physiological measurements
+
+Abstract:
+This dataset contains features from Electrocardiogram (ECG), Thoracic Electrical Bioimpedance (TEB) and the Electrodermal Activity (EDA) for activity recognition.
+
+Source:
+Inma Mohino-Herranz, Signal Theory and Communications, University of Alcala, Spain. inmaculada.mohino@uah.es
+Roberto Gil-Pita, Signal Theory and Communications, University of Alcala, Spain. roberto.gil@uah.es
+Manuel Rosa-Zurera, Signal Theory and Communications, University of Alcala, Spain. manuel.rosa@uah.es
+Fernando Seoane, Clinical Science, Intervention an Technology, Karolinska Institutet, Dept. Biomedical Engineering, Karolinska University Hospital, Swedish School of Textiles, University of Boras, Boras, Sweden. fernando.seoane@ki.se
+
+Data Type: Multivariate 
+Task: Classification 
+Attribute Type: Real
+Area: Life Sciences
+
+Number of Instances (records in your data set): 
+4480
+
+Number of Attributes (fields within each record): 
+533
+
+Relevant Information:
+In order to elicit the different activities, we have used a segment documentary called Earth to induce Neutral Activity. In order to elicit emotional activity, we used a set of segments extracted from several validated movies. American History X (1998) by Savoy Pictures, I am legend (2007) by Warner Bross, Life is beautiful (1997) by Miramax, and Cannibal Holocaust (1980) by F.D. Cinematografica. The mental activity was elicited using a set of games based on mental arithmetic and playing the well-known game Tetris, used several times to elicit mental activity.
+The designed activity recognition system had to take a decision every 10 s, and each individual generated 28 time slots of each activity (the database is balanced). Thus, the total number of patterns (decisions) for this analysis was 4480, and each class is composed of 1120 different patterns.
+In the present analysis, we have used four different activities:
+
+-Neutral activity, registered during the last 140 s of the first movie (the documentary). As each individual watched each movie twice, there are 280 s for each individual in the database
+
+-Emotional activity, registered during the viewing of the last 70 s of the second and third movies (140 s); therefore, we obtained a total of 280 s per individual.
+
+-Mental activity, registered during the last 140 s of both games, producing 280 s in total.
+
+-Physical activity registered during the last 280 s of the physical activity stage. To elicit physical load the participant had to go up and down the stairs for five minutes.
+
+Each attributed was determined using a 40 s window. Measurements were collected from 40 subjects.
+
+Attribute Information:
+The first column correspond to the index of the subject. The next 174 attributes are statistics extracted from the ECG signal. The next 151 attributes are features extracted from the TEB signal. The next 104 attributes come from the EDA measured in the arm, and the next 104 ones from the EDA in the hand. The last attribute is the pattern class, that is, the corresponding activity: 1-neutral, 2-emotional, 3-mental and 4-physical.
